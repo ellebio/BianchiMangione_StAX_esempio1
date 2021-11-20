@@ -71,5 +71,25 @@ public class Studente {
 		}
 
 	}
+	
+	public void setClasse(String toSet) throws Exception {
 
+		if (toSet.isBlank() || toSet.isEmpty()) {
+			throw new Exception("Errore, la classe non può essere vuota");
+		} else {
+			this.classe = toSet;
+		}
+
+	}
+
+	public void setIndirizzo(String toSet) throws Exception {
+
+		if (toSet.isBlank() || toSet.isEmpty()) {
+			throw new Exception("Errore, l'indirizzo non può essere vuoto");
+		} else {
+			this.indirizzo = toSet;
+		}
+
+	}
+	
 }
