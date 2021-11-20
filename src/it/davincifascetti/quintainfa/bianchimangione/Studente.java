@@ -96,7 +96,7 @@ public class Studente {
 
 		if (this.nome.isBlank() || this.nome.isEmpty() || this.cognome.isBlank() || this.cognome.isEmpty()
 				|| this.luogoNascita.isBlank() || this.luogoNascita.isEmpty() || this.indirizzo.isBlank()
-				|| this.indirizzo.isEmpty() || this.dataNascita.toString().isBlank() || this.dataNascita.toString().isEmpty() || this.sesso == "") {
+				|| this.indirizzo.isEmpty() || this.dataNascita.toString().isBlank() || this.dataNascita.toString().isEmpty()) {
 			return false;
 		} else {
 			return true;
