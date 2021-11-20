@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<studente>
+	<nome>Leonardo</nome>
+	<cognome>Bianchi</cognome>
+	<dataNascita>28/09/2003</dataNascita>
+	<luogoNascita>Pisa</luogoNascita>
+	<sesso>M</sesso>
+	<classe>5A</classe>
+	<indirizzo>Informatica</indirizzo>
+</studente>
