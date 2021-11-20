@@ -8,7 +8,6 @@ public class Studente {
 	private String nome, cognome, luogoNascita, classe, indirizzo;
 	private char sesso;
 	private Date dataNascita;
-	private boolean compiled = false;
 
 	public Studente() {
 
@@ -20,7 +19,6 @@ public class Studente {
 			throw new Exception("Errore, il nome non può essere vuoto");
 		} else {
 			this.nome = toSet;
-			this.isComplete();
 		}
 
 	}
@@ -31,7 +29,6 @@ public class Studente {
 			throw new Exception("Errore, il cognome non può essere vuoto");
 		} else {
 			this.cognome = toSet;
-			this.isComplete();
 		}
 
 	}
@@ -45,7 +42,6 @@ public class Studente {
 			try {
 				Date date = Format.parse(toSet);
 				this.dataNascita = date;
-				this.isComplete();
 			} catch (ParseException e) {
 				throw new Exception("Errore nel parsing: " + e);
 			}
@@ -59,7 +55,6 @@ public class Studente {
 			throw new Exception("Errore, il luogo di nascita non può essere vuoto");
 		} else {
 			this.luogoNascita = toSet;
-			this.isComplete();
 		}
 
 	}
@@ -72,7 +67,6 @@ public class Studente {
 			throw new Exception("Errore, il sesso deve essere un unico carattere");
 		} else {
 			this.sesso = toSet.charAt(0);
-			this.isComplete();
 		}
 
 	}
@@ -83,7 +77,6 @@ public class Studente {
 			throw new Exception("Errore, la classe non può essere vuota");
 		} else {
 			this.classe = toSet;
-			this.isComplete();
 		}
 
 	}
@@ -94,27 +87,26 @@ public class Studente {
 			throw new Exception("Errore, l'indirizzo non può essere vuoto");
 		} else {
 			this.indirizzo = toSet;
-			this.isComplete();
 		}
 
 	}
 
-	private void isComplete() {
+	public boolean isComplete() {
 
 		if (this.nome.isBlank() || this.nome.isEmpty() || this.cognome.isBlank() || this.cognome.isEmpty()
 				|| this.luogoNascita.isBlank() || this.luogoNascita.isEmpty() || this.indirizzo.isBlank()
 				|| this.indirizzo.isEmpty() || this.dataNascita.toString().isBlank()
 				|| this.dataNascita.toString().isEmpty() || this.sesso == Character.MIN_VALUE) {
-			this.compiled = false;
+			return false;
 		} else {
-			this.compiled = true;
+			return true;
 		}
 
 	}
 
 	public String getDetails() throws Exception {
 
-		if (this.compiled) {
+		if (this.isComplete()) {
 			String toReturn = "Informazioni studente\n";
 			toReturn += "Nome: " + this.nome + ", cognome: " + this.cognome + ", sesso: " + this.sesso + "\n";
 			toReturn += "Data e luogo di nascita: " + this.luogoNascita + ", " + this.dataNascita + "\n";
