@@ -9,7 +9,7 @@ public class Studente {
 	private char sesso;
 	private Date dataNascita;
 	private boolean compiled = false;
-	
+
 	public Studente() {
 
 	}
@@ -71,7 +71,7 @@ public class Studente {
 		}
 
 	}
-	
+
 	public void setClasse(String toSet) throws Exception {
 
 		if (toSet.isBlank() || toSet.isEmpty()) {
@@ -91,5 +91,22 @@ public class Studente {
 		}
 
 	}
-	
+
+	private boolean isComplete() {
+
+		if (this.nome.isBlank() || this.nome.isEmpty() || this.cognome.isBlank() || this.cognome.isEmpty()
+				|| this.luogoNascita.isBlank() || this.luogoNascita.isEmpty() || this.indirizzo.isBlank()
+				|| this.indirizzo.isEmpty() || this.dataNascita.toString().isBlank() || this.dataNascita.toString().isEmpty() || this.sesso == "") {
+			return false;
+		} else {
+			return true;
+		}
+
+	}
+
+	public String getDetails() throws Exception {
+
+		return "ciao";
+	}
+
 }
