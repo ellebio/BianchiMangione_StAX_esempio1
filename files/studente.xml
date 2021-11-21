@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<studente>
-	<nome>Leonardo</nome>
-	<cognome>Bianchi</cognome>
-	<dataNascita>28/09/2003</dataNascita>
-	<luogoNascita>Pisa</luogoNascita>
-	<sesso>M</sesso>
-	<classe>5A</classe>
-	<indirizzo>Informatica</indirizzo>
-</studente>
+<studenti>	
+	<studente>
+		<nome>Leonardo</nome>
+		<cognome>Bianchi</cognome>
+		<dataNascita>11/11/1988</dataNascita>
+		<luogoNascita>Pisa</luogoNascita>
+		<sesso>M</sesso>
+		<classe>5A</classe>
+		<indirizzo>Informatica</indirizzo>
+	</studente>
+	<studente>
+		<nome>Carlo</nome>
+		<cognome>Mangione</cognome>
+		<dataNascita>22/5/1975</dataNascita>
+		<luogoNascita>Pisa</luogoNascita>
+		<sesso>M</sesso>
+		<classe>5A</classe>
+		<indirizzo>Informatica</indirizzo>
+	</studente>
+	<studente>
+		<nome>Serena</nome>
+		<cognome>Sereni</cognome>
+		<dataNascita>22/03/2001</dataNascita>
+		<luogoNascita>Pisa</luogoNascita>
+		<sesso>F</sesso>
+		<classe>4B</classe>
+		<indirizzo>CMA</indirizzo>
+	</studente>
+</studenti>
