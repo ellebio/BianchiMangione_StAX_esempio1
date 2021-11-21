@@ -1,3 +1,6 @@
+/* Authors: Leonardo Bianchi and Carlo Mangione */
+/* Version: 1.0, last modified on 21-11-21 */
+
 package it.davincifascetti.quintainfa.bianchimangione;
 
 import java.text.*;
